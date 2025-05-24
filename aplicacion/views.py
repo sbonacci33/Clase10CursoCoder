@@ -47,3 +47,6 @@ def nuevo_curso(request):
     curso.save()
     return render(request, 'aplicacion/nuevo_curso.html', {'curso': nombre, 'comision': comision})
 
+def inicio(request):
+    return render(request, 'aplicacion/index.html')
+

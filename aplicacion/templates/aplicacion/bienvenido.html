@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Bienvenido/a {{nombre}}  {{apellido}}</h1>
-    <h2>Esta es la vista de bienvenida</h2>
-    <h3>Hoy es {{fecha}}</h3>
-</body>
-</html>
+{% extends 'aplicacion/index.html' %}
 
+{% block titulo %}
+<h1>Bienvenidos a la Academia de Python</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+            <h1>¡Hola {{nombre}} {{apellido}}, bienvenido a la clase</h1>
+            <h2>Estamos encantados de que te unas a nuestra comunidad de aprendizaje de Python.<h2>
+            <h3>Explora nuestros cursos, participa en foros y comienza tu viaje en la programación.<h3>
+{% endblock contenido %}

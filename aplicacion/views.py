@@ -42,7 +42,7 @@ def bienvenido_tpl(request):
 
 def nuevo_curso(request):
     comision = random.randint(10000, 99999)
-    nombre = random.choices(['Python', 'Django', 'Java', 'JavaScript', 'C++'], k=1)
+    nombre = random.choice(['Python', 'Django', 'Java', 'JavaScript', 'C++'])
     curso = Curso(nombre=nombre, comision=comision)
     curso.save()
     return render(request, 'aplicacion/nuevo_curso.html', {'curso': nombre, 'comision': comision})

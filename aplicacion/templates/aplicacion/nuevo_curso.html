@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>El curso {{curso}} ha sido creado con éxito.</h1>
-    <h21>Nombre del curso: {{curso}}</h2>
-    <h2>Comisión: {{comision}}</h2>
-</body>
-</html>
+{% extends 'aplicacion/index.html' %}
+
+{% block titulo %}
+<h1>🎉 ¡Curso creado con éxito!</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>📘 Curso: {{curso}}</h2>
+    <h3>🆔 Comisión asignada: {{comision}}</h3>
+{% endblock contenido %}
+
